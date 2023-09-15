@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_get/app/modules/add_mahasiswa/controllers/add_mahasiswa_controller.dart';
+import 'package:uas_21312079/app/modules/add_mahasiswa/controllers/add_mahasiswa_controller.dart';
 
 class AddMahasiswaView extends StatelessWidget {
   final AddMahasiswaController controller = Get.put(AddMahasiswaController());
@@ -32,17 +32,6 @@ class AddMahasiswaView extends StatelessWidget {
                 controller: controller.cAlamat,
                 decoration: InputDecoration(labelText: 'Alamat Mahasiswa'),
               ),
-              SizedBox(height: 10),
-              TextField(
-                controller: controller.cProgramStudi,
-                decoration: InputDecoration(labelText: 'Program Studi Mahasiswa'),
-              ),
-              SizedBox(height: 10),
-              TextField(
-                controller: controller.cJenisKelamin,
-                decoration: InputDecoration(labelText: 'Jenis Kelamin Mahasiswa'),
-              ),
-              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Panggil fungsi untuk menambahkan mahasiswa di controller
@@ -50,8 +39,6 @@ class AddMahasiswaView extends StatelessWidget {
                     controller.cNama.text,
                     controller.cNpm.text,
                     controller.cAlamat.text,
-                    controller.cProgramStudi.text,
-                    controller.cJenisKelamin.text,
                   );
                 },
                 child: Text('Tambah Mahasiswa'),

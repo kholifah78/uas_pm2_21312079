@@ -87,33 +87,4 @@ void resetPassword(String email) async{
     );
   }
  }
- void LoginGoogle() async {
-  try {
-    GoogleSignIn _googleSignIn = GoogleSignIn();
-    GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-
-    if (googleUser != null) {
-      final GoogleSignInAuthentication? googleAuth = 
-      await googleUser?.authentication;
-
-      final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth?.accessToken,
-        idToken: googleAuth?.idToken,
-      );
-
-      await FirebaseAuth.instance.signInWithCredential(credential);
-      Get.offNamed(Routes.HOME);
-
-    } else {
-      throw "Belum memilih akun google";
-    }
-
-  } catch (error) {
-    print(error);
-    Get.defaultDialog(
-      title: "Terjadi Kesalahan",
-      middleText: "${error.toString()}",
-    );
-  }
- }
 }

@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:project_get/app/modules/add_mahasiswa/bindings/add_mahasiswa_binding.dart';
+import 'package:uas_21312079/app/modules/add_mahasiswa/bindings/add_mahasiswa_binding.dart';
 import 'package:uas_21312079/app/modules/add_mahasiswa/bindings/add_mahasiswa_binding.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/login/bindings/login_binding.dart';
